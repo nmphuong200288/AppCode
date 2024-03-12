@@ -1,6 +1,4 @@
 version: 2.1
-DOCKER_PASSWORD: Tm@bd0000
-DOCKER_USERNAME: nmphuong1
 jobs:
   build_and_push:
     docker:
