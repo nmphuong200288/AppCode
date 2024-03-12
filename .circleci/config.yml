@@ -4,8 +4,8 @@ jobs:
     docker:
       - image: cimg/node:20.3.1
         auth: 
-          username: $DOCKER_USERNAME
-          password: $DOCKER_PASSWORD
+          username: $DOCKERHUB_USERNAME
+          password: $DOCKERHUB_PASSWORD
     steps:
       - checkout
       - setup_remote_docker
@@ -15,7 +15,8 @@ jobs:
             version="build-$CIRCLE_BUILD_NUM"
             echo $version
             docker build -t chauhanhimani/todo-app:$version .
-            echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
+            # echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
+             echo $DOCKERHUB_PASSWORD | docker login -u $DOCKERHUB_USERNAME --password-stdin
             # docker push chauhanhimani/todo-app:$version
 
   # Update_manifest:
