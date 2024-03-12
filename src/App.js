@@ -87,7 +87,7 @@ class App extends Component {
                         fontWeight: "bolder",
                     }}
                 >
-                    TODI LIST
+                    TODO LIST
                 </Row>
   
                 <hr />
