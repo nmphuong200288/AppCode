@@ -27,10 +27,8 @@ orbs:
           path: .
           repo: circleci-ecr-demo
           tag: sampleTag-build-$CIRCLE_BUILD_NUM
-workflows:
-  GitOpsflow:
-    jobs:
-      - build-and-push-image
+
+          
 #   Update_manifest:
 #     docker:
 #       - image: cimg/base:2023.06
