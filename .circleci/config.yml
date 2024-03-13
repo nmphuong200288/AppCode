@@ -19,6 +19,8 @@
 version: 2.1
 orbs:
   aws-ecr: circleci/aws-ecr@8.1.3
+workflows:
+  build_and_push_image:  
     jobs:
       - build-and-push-image:
           context: aws-dev
@@ -27,8 +29,6 @@ orbs:
           path: .
           repo: circleci-ecr-demo
           tag: sampleTag-build-$CIRCLE_BUILD_NUM
-workflows: 
-  - build-and-push-image
           
 #   Update_manifest:
 #     docker:
