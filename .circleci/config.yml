@@ -31,7 +31,8 @@ orbs:
           tag: $CIRCLE_BUILD_NUM
 workflows:
   GitOpsflow:
-    jobs: aws-ecr/build-and-push-image          
+    jobs: 
+      - aws-ecr/build-and-push-image          
 #   Update_manifest:
 #     docker:
 #       - image: cimg/base:2023.06
