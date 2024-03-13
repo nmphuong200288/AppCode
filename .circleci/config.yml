@@ -43,13 +43,13 @@ jobs:
             git push -q https://$GITHUB_PERSONAL_TOKEN@github.com/nmphuong200288/kube_manifest.git main 
     
 
-# workflows:
-#   GitOpsflow:
-#     jobs:
-#       - build_and_push
-      # - Update_manifest:
-      #     requires:
-      #       - build_and_push
+workflows:
+  GitOpsflow:
+    jobs:
+      - build_and_push
+      - Update_manifest:
+          requires:
+            - build_and_push
       
 
 
