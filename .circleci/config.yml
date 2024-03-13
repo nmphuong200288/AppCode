@@ -56,13 +56,16 @@ workflows:
   GitOpsflow:
     jobs:
       - build_and_push
+        branches:
+          only:
+            - main
       - Update_manifest:
           requires:
             - build_and_push
           filters:
             branches:
               only:
-                - main
+                - update_manifest
       
 
 
