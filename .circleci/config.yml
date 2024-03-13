@@ -1,8 +1,5 @@
 #Build and Push image to DockerHub
 version: 2.1
-orbs:
-  aws-ecr: circleci/aws-ecr@8.1.3
-  aws-cli: circleci/aws-cli@4.0
 jobs:
   build_and_push:
     docker:
@@ -28,8 +25,8 @@ jobs:
             # docker push nmphuong1/todo-app:$version
 
   Update_manifest:
-    # docker:
-    #   - image: cimg/base:2023.06
+    docker:
+      - image: cimg/base:2023.06
     steps:
       - checkout
       - setup_remote_docker
