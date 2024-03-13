@@ -16,7 +16,7 @@ jobs:
             unzip awscliv2.zip
             sudo ./aws/install
             aws --version
-            #Push image to DockerHub
+            #Push image to DockerHub. To NEED to ADD variables to CircleCI environment
             # echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
             # docker build -t nmphuong1/todo-app:$version .
             # docker push nmphuong1/todo-app:$version
