@@ -11,7 +11,7 @@ jobs:
       - checkout
       - setup_remote_docker
       - run:
-          name: Lets build and push image
+          name: Build and push image
           command: |
             version="build-$CIRCLE_BUILD_NUM"
             echo $version
@@ -28,8 +28,8 @@ jobs:
             # docker push nmphuong1/todo-app:$version
 
   Update_manifest:
-    docker:
-      - image: cimg/base:2023.06
+    # docker:
+    #   - image: cimg/base:2023.06
     steps:
       - checkout
       - setup_remote_docker
