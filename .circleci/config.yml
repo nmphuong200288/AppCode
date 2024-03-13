@@ -41,10 +41,8 @@
 #             git push -q https://$GITHUB_PERSONAL_TOKEN@github.com/nmphuong200288/kube_manifest.git main 
 
 version: 2.1
-
 orbs:
   aws-ecr: circleci/aws-ecr@8.1.3
-
 workflows:
   build_and_push_image:
     jobs:
