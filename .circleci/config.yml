@@ -28,7 +28,7 @@ workflows:
           dockerfile: Dockerfile
           path: .
           repo: circleci-ecr-demo
-          tag: myimage-build-$CIRCLE_BUILD_NUM"
+          tag: "$CIRCLE_SHA1"
           
 #   Update_manifest:
 #     docker:
