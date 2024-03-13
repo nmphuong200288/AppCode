@@ -23,7 +23,7 @@ jobs:
             # echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
             docker build -t circleci-ecr-demo:$version .
             # docker build -t nmphuong1/todo-app:$version .
-            # docker push $AWS_ACCOUNT.dkr.ecr.$AWS_REGION.amazonaws.com/circleci-ecr-demo:$version
+            docker push $AWS_ACCOUNT.dkr.ecr.$AWS_REGION.amazonaws.com/circleci-ecr-demo
             # docker push nmphuong1/todo-app:$version
 
   Update_manifest:
