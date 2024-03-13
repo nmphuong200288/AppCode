@@ -52,7 +52,7 @@ workflows:
           dockerfile: Dockerfile
           path: .
           repo: circleci-ecr-demo
-          tag: sampleTag-"$CIRCLE_SHA1"
+          tag: sampleTag-build-$CIRCLE_BUILD_NUM
 # workflows:
 #   GitOpsflow:
 #     jobs:
