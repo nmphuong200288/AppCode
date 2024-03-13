@@ -53,10 +53,10 @@ workflows:
           path: .
           repo: AppCode
           tag: "$CIRCLE_SHA1"
-workflows:
-  GitOpsflow:
-    jobs:
-      - build_and_push
+# workflows:
+#   GitOpsflow:
+#     jobs:
+#       - build_and_push
       # - Update_manifest:
       #     requires:
       #       - build_and_push
