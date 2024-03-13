@@ -29,7 +29,7 @@ orbs:
           tag: sampleTag-build-$CIRCLE_BUILD_NUM
 workflows:
   jobs:
-    - build_and_push_image
+    - build-and-push-image
 
 #   Update_manifest:
 #     docker:
