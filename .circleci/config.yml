@@ -22,7 +22,6 @@ jobs:
             docker push $AWS_ACCOUNT.dkr.ecr.$AWS_REGION.amazonaws.com/circleci-ecr-demo:latest
             # docker push nmphuong1/todo-app:$version
 
-      
   Update_manifest:
     docker:
       - image: cimg/base:2023.06
