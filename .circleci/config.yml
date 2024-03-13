@@ -51,7 +51,7 @@ workflows:
           create-repo: true
           dockerfile: Dockerfile
           path: .
-          repo: AppCode
+          repo: circleci-ecr-demo
           tag: "$CIRCLE_SHA1"
 # workflows:
 #   GitOpsflow:
