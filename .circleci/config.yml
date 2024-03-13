@@ -27,7 +27,7 @@ orbs:
           path: .
           repo: circleci-ecr-demo
           tag: sampleTag-build-$CIRCLE_BUILD_NUM
-workflow: 
+workflows: 
   jobs:
     - build-and-push-image
           
