@@ -51,6 +51,7 @@ jobs:
             git commit -m "new build with imgTag build-$TAG"
             git config credential.helper 'cache --timeout=120'
             git push -q https://$GITHUB_PERSONAL_TOKEN@github.com/nmphuong200288/kube_manifest.git main 
+            ((TAG--))
     
 workflows:
   GitOpsflow:
