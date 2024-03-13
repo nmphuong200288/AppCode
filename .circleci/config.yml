@@ -28,7 +28,9 @@ orbs:
           repo: circleci-ecr-demo
           tag: sampleTag-build-$CIRCLE_BUILD_NUM
 workflows:
-  build_and_push_image
+  GitOpsflow:
+    jobs:
+      - build_and_push_image
 
 #   Update_manifest:
 #     docker:
