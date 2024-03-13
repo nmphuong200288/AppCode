@@ -22,8 +22,9 @@ jobs:
             aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT.dkr.ecr.$AWS_REGION.amazonaws.com
             # echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
             docker build -t circleci-ecr-demo:$version .
+            docker tag circleci-ecr-demo:$version 835776587202.dkr.ecr.ap-southeast-2.amazonaws.com/circleci-ecr-demo:$version
             # docker build -t nmphuong1/todo-app:$version .
-            docker push $AWS_ACCOUNT.dkr.ecr.$AWS_REGION.amazonaws.com/circleci-ecr-demo
+            # docker push $AWS_ACCOUNT.dkr.ecr.$AWS_REGION.amazonaws.com/circleci-ecr-demo
             # docker push nmphuong1/todo-app:$version
 
   Update_manifest:
